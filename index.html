@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="CENT؛ ابزارهای کاربردی، ساده و سریع برای هر روز." />
+  <title>CENT — همه‌چیز برای ساده‌تر شدن روز</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="noise" aria-hidden="true"></div>
+  <header class="site-header" id="siteHeader">
+    <a class="brand" href="#top" aria-label="همراه، صفحه اصلی">CENT<span class="brand-dot">.</span></a>
+    <nav class="desktop-nav" aria-label="ناوبری اصلی">
+      <a class="nav-link active" href="#top">خانه</a>
+      <button class="nav-link menu-trigger" type="button" aria-expanded="false" aria-controls="megaMenu">ابزارها <span class="chevron">⌄</span></button>
+      <a class="nav-link" href="#study">مطالعه</a>
+      <a class="nav-link" href="#design">طراحی</a>
+      <a class="nav-link" href="#notes">یادداشت</a>
+      <a class="nav-link" href="hamrah-about-v1/about.html">درباره</a>
+    </nav>
+    <button class="menu-button" id="menuButton" type="button" aria-expanded="false" aria-controls="megaMenu">
+      <span>منو</span><i></i><i></i>
+    </button>
+  </header>
+
+  <div class="mega-overlay" id="megaOverlay"></div>
+  <aside class="mega-menu" id="megaMenu" aria-hidden="true">
+    <div class="mega-inner">
+      <div class="mega-top">
+        <div><span class="eyebrow">کتابخانه</span><h2>چیزی که لازم داری، همین‌جاست.</h2></div>
+        <button class="close-menu" id="closeMenu" type="button" aria-label="بستن منو">×</button>
+      </div>
+      <div class="mega-grid">
+        <section class="mega-col">
+          <button class="accordion-head" type="button">ابزارها <span>+</span></button>
+          <div class="accordion-body">
+            <a href="hamrah-calculator/ma_he.html">ماشین حساب(فعال)</a><a href="hamrah-converter-v2/converter.html">تبدیل واحد(فعال)</a><a href="#tools">محاسبه درصد</a><a href="#tools">محاسبه سن</a><a href="#tools">محاسبه تخفیف</a>
+          </div>
+        </section>
+        <section class="mega-col">
+          <button class="accordion-head" type="button">مطالعه <span>+</span></button>
+          <div class="accordion-body">
+            <a href="study-timer/timer.html">تایمر مطالعه(فعال)</a><a href="#study">پومودورو</a><a href="#study">برنامه‌ریزی</a><a href="#study">محاسبه معدل</a>
+          </div>
+        </section>
+        <section class="mega-col">
+          <button class="accordion-head" type="button">طراحی <span>+</span></button>
+          <div class="accordion-body">
+            <a href="#design">Color Lab</a><a href="#design">Gradient Maker</a><a href="#design">پالت رنگ</a>
+          </div>
+        </section>
+        <section class="mega-col">
+          <button class="accordion-head" type="button">یادداشت <span>+</span></button>
+          <div class="accordion-body">
+            <a href="#notes">یادداشت جدید</a><a href="#notes">یادداشت‌های من</a><a href="#notes">فهرست کارها</a>
+          </div>
+        </section>
+      </div>
+      <div class="mega-footer"><span>برای شروع فقط یکی را انتخاب کن.</span><span class="menu-index">۰۱ / ۰۴</span></div>
+    </div>
+  </aside>
+
+  <main id="top">
+    <section class="hero section-pad">
+      <div class="hero-grid-line line-a"></div><div class="hero-grid-line line-b"></div>
+      <div class="hero-orb orb-one" data-depth="0.18"></div><div class="hero-orb orb-two" data-depth="-0.12"></div>
+      <div class="hero-content">
+        <div class="hero-kicker reveal"><span class="status-dot"></span> مجموعه‌ای برای هر روز</div>
+        <h1 class="hero-title reveal-title"><span>همه‌چیز</span><span>برای ساده‌تر شدن روز.</span></h1>
+        <p class="hero-sub reveal">ابزارهای کاربردی، ساده و سریع؛ همه در یکجا.</p>
+        <div class="hero-actions reveal">
+          <a class="button button-dark magnetic" href="#tools">شروع کنید <span>←</span></a>
+          <a class="button button-light magnetic" href="#tools">مشاهده ابزارها</a>
+        </div>
+      </div>
+      <div class="hero-preview reveal" aria-label="پیش‌نمایش محیط همراه">
+        <div class="preview-top"><span>CENT / ابزارها</span><span>۰۶ ابزار فعال</span></div>
+        <div class="preview-core"><div class="core-ring"></div><div class="core-center">CENT</div></div>
+        <div class="preview-label label-one">محاسبه‌گر <b>۰۱</b></div>
+        <div class="preview-label label-two">تمرکز <b>۰۲</b></div>
+        <div class="preview-label label-three">رنگ <b>۰۳</b></div>
+        <div class="preview-footer"><span>آرام، دقیق، آماده.</span><span>● آنلاین</span></div>
+      </div>
+      <div class="scroll-note"><span>پایین برو</span><i></i></div>
+    </section>
+
+    <section class="universe section-pad" id="tools">
+      <div class="section-head reveal"><span class="eyebrow">جهان ابزارها</span><p>از یک محاسبه‌ی سریع تا یک جلسه‌ی عمیق مطالعه؛ ابزار مناسب همیشه یک حرکت فاصله دارد.</p></div>
+      <div class="universe-stage">
+        <div class="universe-center"><span class="center-small">همه در</span><strong>یکجا</strong><span class="center-line"></span><small>برای روزهای واقعی</small></div>
+        <a href="hamrah-calculator/ma_he.html"><button class="tool-orbit tool-1 active-tool" data-tool="ماشین حساب" style="--x:7%;--y:19%;">ماشین حساب<span>۰۱</span></button></a> 
+        <a href="hamrah-converter-v2/converter.html"><button class="tool-orbit tool-2" data-tool="تبدیل واحد" style="--x:74%;--y:9%;">تبدیل واحد<span>۰۲</span></button></a>
+        <a href="study-timer/timer.html"><button class="tool-orbit tool-3" data-tool="تایمر" style="--x:81%;--y:66%;">تایمر<span>۰۳</span></button></a> 
+        <button class="tool-orbit tool-4" data-tool="یادداشت" style="--x:13%;--y:70%;">یادداشت<span>۰۴</span></button>
+        <button class="tool-orbit tool-5" data-tool="رنگ" style="--x:42%;--y:4%;">رنگ<span>۰۵</span></button>
+        <button class="tool-orbit tool-6" data-tool="معدل" style="--x:44%;--y:82%;">معدل<span>۰۶</span></button>
+        <div class="tool-detail" id="toolDetail"><span>ابزار انتخاب‌شده</span><strong>ماشین حساب</strong><p>یک محاسبه‌ی دقیق، بدون حاشیه.</p><a href="#tools-preview">باز کردن ابزار ←</a></div>
+      </div>
+    </section>
+
+    <section class="philosophy section-pad" id="about">
+      <div class="philosophy-sticky">
+        <span class="eyebrow">فلسفه‌ی </span>
+        <h2><span class="line-reveal">کمتر جستجو کن.</span><span class="line-reveal">بیشتر انجام بده.</span></h2>
+        <div class="philosophy-caption">ابزار خوب نباید جلوی کار را بگیرد؛ باید ناپدید شود و فقط نتیجه بماند.</div>
+      </div>
+      <div class="principles">
+        <article class="principle"><span>۰۱</span><h3>ساده</h3><p>هر صفحه یک هدف دارد. بدون شلوغی، بدون مسیرهای اضافه.</p></article>
+        <article class="principle"><span>۰۲</span><h3>سریع</h3><p>کمتر کلیک کن، سریع‌تر به نتیجه برس و ادامه بده.</p></article>
+        <article class="principle"><span>۰۳</span><h3>کاربردی</h3><p>چیزهایی که واقعاً در مدرسه، کار و زندگی روزمره لازم می‌شوند.</p></article>
+      </div>
+    </section>
+
+    <section class="featured section-pad" id="tools-preview">
+      <div class="featured-heading reveal"><span class="eyebrow">انتخاب امروز</span><h2>ابزارهایی که هر روز<br><em>به کار می‌آیند</em></h2></div>
+      <div class="featured-layout">
+        <a href="hamrah-calculator/ma_he.html"> <article class="feature-item feature-large"><span class="feature-no">۰۱</span><div><small>محاسبه</small><h3>ماشین حساب</h3><p>از عملیات ساده تا محاسبات روزمره.</p></div><span class="feature-arrow">↗</span></article></a>
+        <article class="feature-item feature-tall"><span class="feature-no">۰۲</span><div><small>تبدیل</small><h3>تبدیل واحد</h3><p>واحدها را در چند ثانیه به هم تبدیل کن.</p></div><span class="feature-arrow">↗</span></article>
+        <article class="feature-item feature-wide" id="study"><span class="feature-no">۰۳</span><div><small>تمرکز</small><h3>پومودورو</h3><p>زمانت را به بخش‌های قابل انجام تبدیل کن.</p></div><span class="feature-arrow">↗</span></article>
+        <article class="feature-item" id="notes"><span class="feature-no">۰۴</span><div><small>یادداشت</small><h3>یادداشت</h3><p>فکرهایت را همان لحظه ثبت کن.</p></div><span class="feature-arrow">↗</span></article>
+        <article class="feature-item" id="design"><span class="feature-no">۰۵</span><div><small>عدد</small><h3>محاسبه معدل</h3><p>نمره‌ها را وارد کن؛ نتیجه را ببین.</p></div><span class="feature-arrow">↗</span></article>
+        <article class="feature-item feature-color"><span class="feature-no">۰۶</span><div><small>طراحی</small><h3>Color Lab</h3><p>با سیاه و سفید، دقیق‌تر ببین.</p></div><span class="feature-arrow">↗</span></article>
+      </div>
+    </section>
+
+    <section class="manifesto section-pad">
+      <div class="manifesto-grid"><span class="eyebrow">برای هر کاری</span><div class="manifesto-word">یک ابزار<span>.</span></div><div class="manifesto-line"></div><p>CENT، مجموعه‌ای از ابزارهای کوچک است که کارهای کوچک را ساده می‌کند؛ تا برای چیزهای بزرگ‌تر وقت داشته باشی.</p></div>
+      <a class="button button-white magnetic" href="#top">ورود به همراه <span>←</span></a>
+    </section>
+  </main>
+
+  <footer class="footer section-pad">
+    <div class="footer-main"><a class="brand footer-brand" href="#top">CENT<span class="brand-dot">.</span></a><p>ابزارهای کاربردی، ساده و سریع.</p></div>
+    <nav class="footer-links" aria-label="پیوندهای پایانی"><a href="#top">خانه</a><a href="#tools">ابزارها</a><a href="#study">مطالعه</a><a href="#design">طراحی</a><a href="#notes">یادداشت</a><a href="#about">درباره</a></nav>
+    <div class="footer-bottom"><span>© ۱۴۰۵ CENT. برای زندگی روزمره.</span><span>ساخته‌شده با دقت.</span></div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

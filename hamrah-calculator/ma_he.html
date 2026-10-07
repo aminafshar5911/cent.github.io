@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ماشین حساب CENT؛ سریع، دقیق و بدون شلوغی.">
+  <title>CENT — ماشین حساب</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="ma_he.css">
+</head>
+<body>
+  <div class="noise" aria-hidden="true"></div>
+  <div class="math-field" aria-hidden="true"><span>+</span><span>×</span><span>÷</span><span>=</span><span>%</span></div>
+
+  <header class="site-header" id="siteHeader">
+    <a class="brand" href="../index.html" aria-label="همراه، صفحه اصلی">CENT<span class="brand-dot">.</span></a>
+    <nav class="desktop-nav" aria-label="ناوبری اصلی">
+      <a class="nav-link" href="../index.html">خانه</a>
+      <button class="nav-link menu-trigger active" type="button" aria-expanded="false" aria-controls="megaMenu">ابزارها <span class="chevron">⌄</span></button>
+      <a class="nav-link" href="#study">مطالعه</a>
+      <a class="nav-link" href="#design">طراحی</a>
+      <a class="nav-link" href="#notes">یادداشت</a>
+      <a class="nav-link" href="#about">درباره</a>
+    </nav>
+    <button class="menu-button" id="menuButton" type="button" aria-expanded="false" aria-controls="megaMenu"><span>منو</span><i></i><i></i></button>
+  </header>
+
+  <div class="mega-overlay" id="megaOverlay"></div>
+  <aside class="mega-menu" id="megaMenu" aria-hidden="true">
+    <div class="mega-inner">
+      <div class="mega-top">
+        <div><span class="eyebrow">کتابخانه‌</span><h2>چیزی که لازم داری، همین‌جاست.</h2></div>
+        <button class="close-menu" id="closeMenu" type="button" aria-label="بستن منو">×</button>
+      </div>
+      <div class="mega-grid">
+        <section class="mega-col"><button class="accordion-head" type="button">ابزارها <span>+</span></button><div class="accordion-body"><a class="current-tool" href="../hamrah-calculator/ma_he.html">ماشین حساب(فعال)</a><a href="../hamrah-converter-v2/converter.html">تبدیل واحد(فعال)</a><a href="#related">محاسبه درصد</a><a href="#related">محاسبه سن</a><a href="#related">محاسبه تخفیف</a></div></section>
+        <section class="mega-col"><button class="accordion-head" type="button">مطالعه <span>+</span></button><div class="accordion-body"><a href="../study-timer/timer.html">تایمر مطالعه(فعال)</a><a href="#study">پومودورو</a><a href="#study">برنامه‌ریزی</a><a href="#study">محاسبه معدل</a></div></section>
+        <section class="mega-col"><button class="accordion-head" type="button">طراحی <span>+</span></button><div class="accordion-body"><a href="#design">Color Lab</a><a href="#design">Gradient Maker</a><a href="#design">پالت رنگ</a></div></section>
+        <section class="mega-col"><button class="accordion-head" type="button">یادداشت <span>+</span></button><div class="accordion-body"><a href="#notes">یادداشت جدید</a><a href="#notes">یادداشت‌های من</a><a href="#notes">فهرست کارها</a></div></section>
+      </div>
+      <div class="mega-footer"><span>برای شروع فقط یکی را انتخاب کن.</span><span>۰۱ / ۰۴</span></div>
+    </div>
+  </aside>
+
+  <main>
+    <section class="intro page-pad">
+      <div class="intro-rule"></div>
+      <div class="intro-meta reveal"><span>ابزارها / ماشین حساب</span><span>۰۱ — محاسبه</span></div>
+      <div class="intro-grid">
+        <div class="intro-copy">
+          <h1 class="title-reveal"><span>حساب کن.</span><span>ساده‌تر.</span></h1>
+          <p class="reveal delay-2">یک ماشین حساب سریع، دقیق و بدون شلوغی.</p>
+        </div>
+        <div class="intro-note reveal delay-3"><span>همراه / ابزارها</span><strong>برای عددهای واقعی.</strong><small>ورودی بگیر. محاسبه کن. ادامه بده.</small></div>
+      </div>
+    </section>
+
+    <section class="calculator-section page-pad" aria-label="ماشین حساب">
+      <div class="calculator-layout">
+        <div class="calculator-shell reveal delay-4">
+          <div class="calc-topline"><span>ماشین حساب / استاندارد</span><span id="calcStatus">آماده</span></div>
+          <div class="display" aria-live="polite">
+            <div class="expression" id="expression">۰</div>
+            <div class="result" id="result">۰</div>
+          </div>
+          <div class="keypad" id="keypad">
+            <button class="key key-soft" data-action="clear">AC</button><button class="key key-soft" data-action="backspace">⌫</button><button class="key key-soft" data-action="percent">%</button><button class="key key-op" data-action="operator" data-value="/">÷</button>
+            <button class="key" data-value="7">۷</button><button class="key" data-value="8">۸</button><button class="key" data-value="9">۹</button><button class="key key-op" data-action="operator" data-value="*">×</button>
+            <button class="key" data-value="4">۴</button><button class="key" data-value="5">۵</button><button class="key" data-value="6">۶</button><button class="key key-op" data-action="operator" data-value="-">−</button>
+            <button class="key" data-value="1">۱</button><button class="key" data-value="2">۲</button><button class="key" data-value="3">۳</button><button class="key key-op" data-action="operator" data-value="+">+</button>
+            <button class="key key-soft" data-action="sign">±</button><button class="key key-zero" data-value="0">۰</button><button class="key" data-value=".">.</button><button class="key key-equal" data-action="equals">=</button>
+          </div>
+          <div class="calc-foot"><span>ورودی صفحه‌کلید فعال است</span><span>ESC پاک کردن · ENTER محاسبه</span></div>
+        </div>
+
+        <aside class="side-column">
+          <section class="history-panel reveal delay-5">
+            <div class="side-head"><div><span class="eyebrow">تاریخچه</span><h2>محاسبه‌های اخیر</h2></div><button id="clearHistory" class="text-button" type="button">پاک کردن</button></div>
+            <div class="history-list" id="historyList"><div class="empty-history">هنوز محاسبه‌ای ثبت نشده.<br><small>اولین نتیجه‌ات را اینجا نگه می‌داریم.</small></div></div>
+          </section>
+          <section class="utility-note reveal delay-6"><span class="note-mark">×</span><div><span class="eyebrow">یادداشت کوچک</span><p>برای محاسبه‌ی سریع درصد، عدد را وارد کن و کلید <b>%</b> را بزن.</p></div></section>
+        </aside>
+      </div>
+    </section>
+
+    <section class="related page-pad" id="related">
+      <div class="related-head reveal"><span class="eyebrow">ادامه بده</span><h2>ابزارهای مرتبط</h2><p>وقتی عدد فقط بخشی از مسئله است.</p></div>
+      <div class="related-list">
+        <a href="#related" class="related-item reveal"><span>۰۱</span><strong>محاسبه درصد</strong><i>←</i></a>
+        <a href="#related" class="related-item reveal"><span>۰۲</span><strong>محاسبه تخفیف</strong><i>←</i></a>
+        <a href="#related" class="related-item reveal"><span>۰۳</span><strong>محاسبه سن</strong><i>←</i></a>
+        <a href="../hamrah-converter-v2/converter.html" class="related-item reveal"><span>۰۴</span><strong>تبدیل واحد(فعال)</strong><i>←</i></a>
+      </div>
+    </section>
+
+    <section class="philosophy page-pad" id="about">
+      <div class="philosophy-inner">
+        <span class="eyebrow reveal">فلسفه‌ی ابزار</span>
+        <h2 class="philosophy-title"><span>قرار نیست</span><span>پیچیده باشد.</span></h2>
+        <p class="philosophy-copy reveal">فقط عددت را وارد کن.<br><strong>بقیه‌اش با CENT</strong></p>
+      </div>
+      <div class="philosophy-index">۰۱ / ۰۱</div>
+    </section>
+  </main>
+
+  <footer class="footer page-pad">
+    <div class="footer-main"><a class="brand footer-brand" href="../index.html">CENT<span class="brand-dot">.</span></a><p>ابزارهای کاربردی، ساده و سریع.</p></div>
+    <nav class="footer-links" aria-label="پیوندهای پایانی"><a href="../index.html">خانه</a><a href="#related">ابزارها</a><a href="#study">مطالعه</a><a href="#design">طراحی</a><a href="#notes">یادداشت</a><a href="#about">درباره</a></nav>
+    <div class="footer-bottom"><span>© ۱۴۰۵ CENT. برای زندگی روزمره.</span><span>ساخته‌شده با دقت.</span></div>
+  </footer>
+
+  <script src="ma_he.js"></script>
+</body>
+</html>

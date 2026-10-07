@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="تایمر مطالعه CENT؛ یک ابزار حرفه‌ای برای تمرکز و مدیریت زمان مطالعه." />
+  <title>تایمر مطالعه — CENT</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="timer.css" />
+</head>
+<body class="timer-page">
+  <div class="noise" aria-hidden="true"></div>
+  <header class="site-header" id="siteHeader">
+    <a class="brand" href="../timer.html" aria-label="CENT، صفحه اصلی">CENT<span class="brand-dot">.</span></a>
+    <nav class="desktop-nav" aria-label="ناوبری اصلی">
+      <a class="nav-link" href="../home/index.html">خانه</a>
+      <button class="nav-link menu-trigger" type="button" aria-expanded="false" aria-controls="megaMenu">ابزارها <span class="chevron">⌄</span></button>
+      <a class="nav-link active" href="./timer.html">مطالعه</a>
+      <a class="nav-link" href="../timer.html#design">طراحی</a>
+      <a class="nav-link" href="../timer.html#notes">یادداشت</a>
+      <a class="nav-link" href="../timer.html#about">درباره</a>
+    </nav>
+    <button class="menu-button" id="menuButton" type="button" aria-expanded="false" aria-controls="megaMenu"><span>منو</span><i></i><i></i></button>
+  </header>
+
+  <div class="mega-overlay" id="megaOverlay"></div>
+  <aside class="mega-menu" id="megaMenu" aria-hidden="true">
+    <div class="mega-inner">
+      <div class="mega-top"><div><span class="eyebrow">کتابخانه‌</span><h2>چیزی که لازم داری، همین‌جاست.</h2></div><button class="close-menu" id="closeMenu" type="button" aria-label="بستن منو">×</button></div>
+      <div class="mega-grid">
+        <section class="mega-col">
+          <button class="accordion-head" type="button">ابزارها <span>+</span></button>
+          <div class="accordion-body"><a href="../hamrah-calculator/ma_he.html">ماشین حساب(فعال)</a><a href="../hamrah-converter-v2/converter.html">تبدیل واحد(فعال)</a><a href="../percentage/index.html">محاسبه درصد</a><a href="../age/index.html">محاسبه سن</a><a href="../discount/index.html">محاسبه تخفیف</a></div>
+        </section>
+        <section class="mega-col active-category">
+          <button class="accordion-head" type="button">مطالعه <span>+</span></button>
+          <div class="accordion-body"><a class="current-tool" href="../study-timer/timer.html" aria-current="page">تایمر مطالعه(فعال)</a><a href="../pomodoro/index.html">پومودورو</a><a href="../planner/index.html">برنامه‌ریزی</a><a href="../gpa/index.html">محاسبه معدل</a></div>
+        </section>
+        <section class="mega-col"><button class="accordion-head" type="button">طراحی <span>+</span></button><div class="accordion-body"><a href="../color-lab/index.html">Color Lab</a><a href="../gradient-maker/index.html">Gradient Maker</a><a href="../palette/index.html">پالت رنگ</a></div></section>
+        <section class="mega-col"><button class="accordion-head" type="button">یادداشت <span>+</span></button><div class="accordion-body"><a href="../notes/index.html">یادداشت جدید</a><a href="../notes/index.html">یادداشت‌های من</a><a href="../todo/index.html">فهرست کارها</a></div></section>
+      </div>
+      <div class="mega-footer"><span>برای شروع فقط یکی را انتخاب کن.</span><span class="menu-index">۰۲ / ۰۴</span></div>
+    </div>
+  </aside>
+
+  <main id="top">
+    <section class="timer-intro section-pad">
+      <div class="precision-grid" aria-hidden="true"><span>01</span><span>25</span><span>05</span><span>00:00</span></div>
+      <div class="timer-intro-copy">
+        <span class="eyebrow timer-label reveal">مطالعه / تایمر مطالعه</span>
+        <h1 class="timer-title reveal-title"><span>تمرکز کن.</span><span>ادامه بده.</span></h1>
+        <p class="timer-intro-text reveal">زمانت را برای مطالعه تنظیم کن و فقط روی کاری که پیش روی توست تمرکز داشته باش.</p>
+      </div>
+      <div class="intro-rule" aria-hidden="true"></div>
+    </section>
+
+    <section class="focus-instrument section-pad" aria-labelledby="timerHeading">
+      <div class="instrument-meta reveal"><span>PRECISION / ۰۱</span><span>CENT / مطالعه</span></div>
+      <div class="instrument-layout">
+        <div class="timer-side-note reveal"><span>جلسه</span><strong id="sessionNumber">۰۱</strong><small>امروز</small></div>
+        <div class="timer-instrument">
+          <div class="mode-switch" role="tablist" aria-label="حالت تایمر">
+            <button class="mode-button active" type="button" role="tab" aria-selected="true" data-mode="study">مطالعه</button>
+            <button class="mode-button" type="button" role="tab" aria-selected="false" data-mode="short">استراحت کوتاه</button>
+            <button class="mode-button" type="button" role="tab" aria-selected="false" data-mode="long">استراحت بلند</button>
+          </div>
+          <div class="timer-ring" id="timerRing" aria-hidden="true"><div class="timer-ring-inner"><span class="timer-status" id="timerStatus">آماده</span><div class="timer-display" id="timerDisplay" aria-live="off">۲۵:۰۰</div><span class="timer-mode-label" id="timerModeLabel">مطالعه</span></div></div>
+          <div class="timer-controls" aria-label="کنترل‌های تایمر">
+            <button class="button button-dark timer-main-button magnetic" id="startPause" type="button"><span id="startPauseText">شروع</span><span aria-hidden="true">←</span></button>
+            <button class="button button-light" id="resetTimer" type="button">ریست</button>
+            <button class="button button-light" id="skipTimer" type="button">رد کردن مرحله</button>
+          </div>
+          <p class="keyboard-hint">Space شروع / توقف&nbsp;&nbsp; · &nbsp;&nbsp;R ریست&nbsp;&nbsp; · &nbsp;&nbsp;S رد کردن</p>
+        </div>
+        <div class="timer-readout reveal">
+          <div><span>زمان سپری‌شده</span><strong id="elapsedTime">۰۰:۰۰</strong></div>
+          <div><span>زمان باقی‌مانده</span><strong id="remainingTime">۲۵:۰۰</strong></div>
+          <div><span>وضعیت</span><strong id="statusReadout">آماده</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="settings-section section-pad" id="settings">
+      <div class="section-intro reveal"><span class="eyebrow">تنظیمات تایمر</span><h2>زمان را<br><em>برای خودت تنظیم کن.</em></h2></div>
+      <div class="settings-grid">
+        <label class="setting-row"><span><b>مدت مطالعه</b><small>دقیقه</small></span><input id="studyMinutes" type="number" min="1" max="180" step="1" inputmode="numeric" value="25" aria-label="مدت مطالعه به دقیقه"></label>
+        <label class="setting-row"><span><b>استراحت کوتاه</b><small>دقیقه</small></span><input id="shortMinutes" type="number" min="1" max="60" step="1" inputmode="numeric" value="5" aria-label="مدت استراحت کوتاه به دقیقه"></label>
+        <label class="setting-row"><span><b>استراحت بلند</b><small>دقیقه</small></span><input id="longMinutes" type="number" min="1" max="90" step="1" inputmode="numeric" value="15" aria-label="مدت استراحت بلند به دقیقه"></label>
+        <div class="setting-row setting-audio"><span><b>بازخورد پایان</b><small>فقط تصویری</small></span><button id="feedbackToggle" class="switch" type="button" role="switch" aria-checked="false"><span></span><b>خاموش</b></button></div>
+      </div>
+      <p class="setting-note" id="settingNote" aria-live="polite">تنظیمات هنگام تغییر ذخیره می‌شوند و با بازخوانی صفحه باقی می‌مانند.</p>
+    </section>
+
+    <section class="daily-section section-pad">
+      <div class="daily-heading reveal"><span class="eyebrow">امروز</span><h2>فقط همین<br><em>جلسه.</em></h2></div>
+      <div class="daily-layout">
+        <div class="daily-focus"><span>تمرکز امروز</span><strong id="focusToday">۰۱:۴۵:۰۰</strong><small id="completedToday">۳ جلسه کامل</small></div>
+        <div class="daily-stat"><span>جلسات امروز</span><strong id="sessionsToday">۰۳</strong></div>
+        <div class="daily-stat"><span>دقایق تمرکز</span><strong id="focusMinutesToday">۱۰۵</strong></div>
+      </div>
+    </section>
+
+    <section class="history-section section-pad">
+      <div class="history-heading"><div><span class="eyebrow">ردپای زمان</span><h2>جلسات اخیر</h2></div><button class="text-button" id="clearHistory" type="button">پاک کردن تاریخچه</button></div>
+      <div class="session-history" id="sessionHistory" aria-live="polite"></div>
+    </section>
+
+    <section class="related-section section-pad">
+      <div class="related-heading reveal"><span class="eyebrow">ادامه بده</span><h2>ابزارهای مرتبط</h2></div>
+      <nav class="related-list" aria-label="ابزارهای مرتبط">
+        <a href="../pomodoro/index.html"><span>۰۱ / پومودورو</span><b>←</b></a>
+        <a href="../planner/index.html"><span>۰۲ / برنامه‌ریزی</span><b>←</b></a>
+        <a href="../gpa/index.html"><span>۰۳ / محاسبه معدل</span><b>←</b></a>
+        <a href="../notes/index.html"><span>۰۴ / یادداشت‌ها</span><b>←</b></a>
+      </nav>
+    </section>
+
+    <section class="timer-philosophy section-pad">
+      <div class="philosophy-marker"><span>فلسفه‌ی CENT</span><i></i></div>
+      <div><h2><span>زمان کافی نیست.</span><span>تمرکز مهم است.</span></h2><p>CENT قرار نیست مطالعه را برایت انجام دهد؛ فقط کمک می‌کند زمانت را بهتر مدیریت کنی.</p></div>
+    </section>
+  </main>
+
+  <footer class="footer section-pad">
+    <div class="footer-main"><a class="brand footer-brand" href="../timer.html">CENT<span class="brand-dot">.</span></a><p>ابزارهای کاربردی، ساده و سریع.</p></div>
+    <nav class="footer-links" aria-label="پیوندهای پایانی"><a href="../home/index.html">خانه</a><a href="../timer.html#tools">ابزارها</a><a href="./timer.html">مطالعه</a><a href="../timer.html#design">طراحی</a><a href="../timer.html#notes">یادداشت</a><a href="../timer.html#about">درباره</a></nav>
+    <div class="footer-bottom"><span>© ۱۴۰۵ CENT. برای زندگی روزمره.</span><span>ساخته‌شده با دقت.</span></div>
+  </footer>
+  <script src="timer.js"></script>
+</body>
+</html>
